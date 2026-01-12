@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ff4da6" />
+  <title>MissLove Repo — Jailbreak Themes</title>
+  <meta name="description" content="MissLove Repo — Kho theme jailbreak. Add vào Sileo: https://misslove-theme.github.io/" />
+
+  <style>
+    :root{
+      --bg: #0b0b10;
+      --card:#121221;
+      --text:#f4f4ff;
+      --muted:#b7b7d4;
+      --line: rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --brand: #ff4da6;
+      --brand2:#7c4dff;
+      --radius: 22px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#faf7ff;
+        --card:#ffffff;
+        --text:#171726;
+        --muted:#5b5b75;
+        --line: rgba(0,0,0,.08);
+        --shadow: 0 18px 60px rgba(23,23,38,.12);
+      }
+    }
+
+    html[data-theme="dark"]{
+      --bg: #0b0b10;
+      --card:#121221;
+      --text:#f4f4ff;
+      --muted:#b7b7d4;
+      --line: rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+    html[data-theme="light"]{
+      --bg:#faf7ff;
+      --card:#ffffff;
+      --text:#171726;
+      --muted:#5b5b75;
+      --line: rgba(0,0,0,.08);
+      --shadow: 0 18px 60px rgba(23,23,38,.12);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 500px at 20% -10%, rgba(255,77,166,.35), transparent 55%),
+                  radial-gradient(900px 500px at 80% 0%, rgba(124,77,255,.30), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{
+      width:min(1100px, 92vw);
+      margin: 28px auto 60px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding: 14px 2px;
+    }
+    .brandline{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 260px;
+    }
+
+    /* ✅ ICON TRÒN + M */
+    .logo{
+      width:44px;height:44px;
+      border-radius: 999px;
+      display:grid;place-items:center;
+      background: linear-gradient(135deg, rgba(255,77,166,.98), rgba(124,77,255,.98));
+      box-shadow: var(--shadow);
+      border:1px solid rgba(255,255,255,.15);
+      overflow:hidden;
+    }
+    .logoM{
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: .5px;
+      color: rgba(255,255,255,.96);
+      text-shadow: 0 8px 30px rgba(0,0,0,.35);
+      transform: translateY(-0.5px);
+      user-select:none;
+    }
+
+    .brandtext b{ display:block; font-size: 15px; letter-spacing:.2px; }
+    .brandtext span{ display:block; font-size: 12.5px; color: var(--muted); margin-top:2px; }
+
+    .pill{ display:flex; gap:10px; align-items:center; }
+
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor:pointer;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      font-weight: 650;
+      letter-spacing:.1px;
+    }
+    html[data-theme="light"] .btn{ background: rgba(0,0,0,.03); }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,77,166,.35); }
+    .btn:active{ transform: translateY(0px) scale(.99); }
+
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, rgba(255,77,166,.98), rgba(124,77,255,.98));
+      box-shadow: 0 14px 45px rgba(255,77,166,.18);
+    }
+    .btn.primary:hover{ box-shadow: 0 18px 60px rgba(255,77,166,.25); }
+
+    .hero{
+      margin-top: 14px;
+      padding: 28px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    html[data-theme="light"] .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(600px 200px at 30% 0%, rgba(255,77,166,.25), transparent 55%),
+                  radial-gradient(600px 220px at 80% 20%, rgba(124,77,255,.22), transparent 60%);
+      pointer-events:none;
+    }
+    .hero > *{ position:relative; }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .heroGrid{ grid-template-columns: 1fr; }
+    }
+
+    h1{
+      margin: 0 0 10px 0;
+      font-size: clamp(26px, 3.2vw, 38px);
+      letter-spacing: -.4px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 14.5px;
+      margin: 0 0 18px 0;
+    }
+
+    .card{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 18px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.20);
+    }
+    html[data-theme="light"] .card{ background: rgba(255,255,255,.75); box-shadow: 0 12px 35px rgba(23,23,38,.10); }
+
+    .sourceBox{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      height:100%;
+    }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 13px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      word-break: break-all;
+      color: var(--text);
+    }
+    html[data-theme="light"] .mono{ background: rgba(0,0,0,.04); }
+
+    .row{ display:flex; gap:10px; flex-wrap:wrap; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
+
+    .title{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      margin-bottom: 10px;
+    }
+    .title h2{
+      margin:0;
+      font-size: 16px;
+      letter-spacing: -.2px;
+    }
+    .muted{ color: var(--muted); font-size: 13.5px; margin: 8px 0 0; }
+    ul{ margin: 10px 0 0 18px; color: var(--muted); }
+    li{ margin: 6px 0; }
+
+    .pillTag{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      font-size: 13px;
+      color: var(--text);
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    html[data-theme="light"] .pillTag{ background: rgba(0,0,0,.03); }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      padding: 11px 14px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(15,15,22,.88);
+      backdrop-filter: blur(10px);
+      color: var(--text);
+      font-weight: 650;
+      display:none;
+      box-shadow: var(--shadow);
+      z-index: 50;
+      max-width: min(520px, 92vw);
+      text-align:center;
+    }
+    html[data-theme="light"] .toast{ background: rgba(255,255,255,.88); }
+
+    footer{
+      margin-top: 18px;
+      padding: 16px 2px 0;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+    }
+    .smallLink{ opacity:.95; }
+    .smallLink:hover{ text-decoration: underline; }
+
+    .i{ width:18px; height:18px; display:inline-block; }
+    .spark{
+      width:10px;height:10px;border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.1) 55%),
+                  linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 3px rgba(255,77,166,.13);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="top">
+    <div class="topbar">
+      <div class="brandline">
+        <div class="logo" aria-label="MissLove Icon">
+          <div class="logoM">M</div>
+        </div>
+
+        <div class="brandtext">
+          <b>MissLove Repo</b>
+          <span>Repo Jailbreak • Themes • UI đẹp cho iOS bros</span>
+        </div>
+      </div>
+
+      <div class="pill">
+        <!-- ✅ chỉ ghi “Sáng / Tối” -->
+        <button class="btn" id="themeBtn" title="Chuyển Sáng/Tối">
+          <span class="spark" aria-hidden="true"></span>
+          <span id="themeLabel">Sáng / Tối</span>
+        </button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="heroGrid">
+        <div>
+          <h1>MissLove Repo — “đẹp từ icon tới từng pixel” ✨</h1>
+          <p class="sub">
+            Kho <b>Theme / UI</b> dành cho jailbreak. Nhấn 1 phát là thêm vào Sileo — nhanh, gọn, đẹp.
+          </p>
+
+          <div class="row">
+            <!-- ✅ đổi chữ -->
+            <a class="btn primary" id="addSileoBtn" href="#" rel="nofollow">
+              <svg class="i" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l3.2 6.5L22 9.3l-5 4.9 1.2 6.8L12 18.8 5.8 21l1.2-6.8-5-4.9 6.8-.8L12 2z" stroke="rgba(255,255,255,.95)" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+              Thêm vào Sileo
+            </a>
+
+            <button class="btn" id="copyBtn">
+              <svg class="i" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 9h10v10H9V9z" stroke="currentColor" stroke-width="1.8" />
+                <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              Copy link
+            </button>
+          </div>
+
+          <!-- ✅ bỏ các mục: Tải icon / Theme Repo / GitHub Pages -->
+        </div>
+
+        <div class="card sourceBox">
+          <div class="title">
+            <h2>Source URL</h2>
+            <span class="pillTag">✅ Online</span>
+          </div>
+
+          <div class="mono" id="sourceUrl">https://misslove-theme.github.io/</div>
+
+          <p class="muted">
+            Nếu “Thêm vào Sileo” không tự mở, bạn copy link ở trên rồi dán vào Sileo → Sources → Add.
+          </p>
+
+          <div class="row">
+            <a class="btn" href="#howto">Cách thêm repo</a>
+            <a class="btn" href="#support">Ủng hộ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="howto">
+        <div class="title">
+          <h2>Cách thêm vào Sileo</h2>
+          <span class="pillTag">🟢 Dễ</span>
+        </div>
+        <ul>
+          <li>Mở Sileo → <b>Sources</b> → <b>Add</b></li>
+          <li>Dán: <span class="mono" style="display:inline-block;padding:6px 10px;">https://misslove-theme.github.io/</span></li>
+          <li>Nhấn <b>Add Source</b> là xong ✅</li>
+        </ul>
+        <p class="muted">Tip: Nhấn “Copy link” ở trên cho nhanh.</p>
+      </div>
+
+      <div class="card">
+        <div class="title">
+          <h2>Repo có gì?</h2>
+          <span class="pillTag">✨ Theme</span>
+        </div>
+        <ul>
+          <li>Theme màn hình chính / icon / UI</li>
+          <li>Gói tuỳ biến nhẹ, đẹp, ít xung đột</li>
+          <li>Ưu tiên “mượt & ổn định”</li>
+        </ul>
+        <p class="muted">Bạn có thể sửa mô tả này theo style của bạn.</p>
+      </div>
+
+      <div class="card" id="support">
+        <div class="title">
+          <h2>Ủng hộ MissLove</h2>
+          <span class="pillTag">❤️ Support</span>
+        </div>
+
+        <p class="muted" style="margin-top:0">
+          Ủng hộ bro ly cà phê để có động lực ra theme mới 😄
+        </p>
+
+        <div class="mono" style="margin-top:10px">
+          STK: <b>1907 2945 6380 11</b><br/>
+          Ngân hàng: <b>TechcomBank</b><br/>
+          Chủ TK: <b>Phan Phước Toàn</b>
+        </div>
+
+        <p class="muted">*Cảm ơn mọi người đã ủng hộ tôi❤️.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>Copyright © 2020–2026 • <b>MissLove Repo</b></div>
+      <div>
+        <a class="smallLink" href="https://misslove-theme.github.io/" target="_blank" rel="noopener">misslove-theme.github.io</a>
+        &nbsp;•&nbsp;
+        <a class="smallLink" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Lên đầu trang</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Đã copy!</div>
+
+  <script>
+    (function(){
+      const SOURCE = "https://misslove-theme.github.io/";
+      const toast = document.getElementById("toast");
+      document.getElementById("sourceUrl").textContent = SOURCE;
+
+      // Sileo deeplink
+      const sileoDeepLink = "sileo://source/" + encodeURIComponent(SOURCE);
+      document.getElementById("addSileoBtn").href = sileoDeepLink;
+
+      // Theme toggle (label luôn là “Sáng / Tối”)
+      const themeBtn = document.getElementById("themeBtn");
+
+      function getPreferredTheme(){
+        const saved = localStorage.getItem("misslove_theme");
+        if(saved === "light" || saved === "dark") return saved;
+        return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      function setTheme(t){
+        document.documentElement.setAttribute("data-theme", t);
+        localStorage.setItem("misslove_theme", t);
+      }
+      setTheme(getPreferredTheme());
+
+      themeBtn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") || getPreferredTheme();
+        setTheme(current === "light" ? "dark" : "light");
+      });
+
+      // Toast helper
+      let toastTimer = null;
+      function showToast(msg){
+        toast.textContent = msg;
+        toast.style.display = "block";
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.style.display = "none", 1600);
+      }
+
+      // Copy URL
+      document.getElementById("copyBtn").addEventListener("click", async () => {
+        try{
+          await navigator.clipboard.writeText(SOURCE);
+          showToast("Đã copy source URL ✅");
+        }catch(e){
+          const ta = document.createElement("textarea");
+          ta.value = SOURCE;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          ta.remove();
+          showToast("Đã copy (fallback) ✅");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
