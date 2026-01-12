@@ -1,11 +1,11 @@
-Origin: MissLive
-Label: Theme icon
+Origin: Miss Repo
+Label: Kho lưu trữ các chủ để Snowboard
 Suite: stable
 Version: 1.0
 Codename: ios
-Architecture: iphoneos-arm iphones-arm64
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: Apple-Support
+Description: Apple/Support/Jailbreak
 MD5Sum:
  7f87e4ea5bbdd829b20fcd6fc9aadce6 1871 Packages
  fc0bf5546dd251c0a5844f52be7bfb7f 1036 Packages.bz2
