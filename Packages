@@ -1,0 +1,50 @@
+Package: com.choco.tg
+Architecture: iphoneos-arm64
+Version: 1.7.1
+Section: Tweaks
+Maintainer: choco
+Installed-Size: 13768
+Filename: ./debs/com.choco.tg_1.7.1_iphoneos-arm64.deb
+Size: 2328580
+MD5sum: 8d328d5af44d47eef881093d3c7239c0
+SHA1: 9a8d330645e4e6bb96e3c6e2c11ac87a1160aa82
+SHA256: 53ed1382b86fe00fc9e4ce8014451c90b2dec6edaf2afcffe910a70f103dff09
+SHA512: 1f747ad548f8ce5dc246f0c7d583f73b2175b431ca433d8c3a8656c306dfd4749b79939a5805a557b10de22b0ef208a9e5a3615d790d4fe0e932e1f2ac1dca92
+Description: An simple Tweak For Telegram iOS
+Name: TGExtra
+Author: choco
+
+Package: com.choco.tg
+Architecture: iphoneos-arm64e
+Version: 1.7.1
+Section: Tweaks
+Maintainer: choco
+Installed-Size: 13768
+Filename: ./debs/com.choco.tg_1.7.1_iphoneos-arm64e.deb
+Size: 2333228
+MD5sum: 0b8c3ccc71bf9a3b3c0b17acc5deba15
+SHA1: 9392d6247c6bf2e88bb5cdd050254f6c4bbe4cfc
+SHA256: 5491af9029c2dd88a964f401a52ea75acffb31bc7eb14fe493ad8e047cbe12ce
+SHA512: ceceae3099c7259b0ab2236167dfd1ced5a1821c2cc08f4f06f47519ce671450b9cac40b132dc39ecd59915d0cbdb8e62220a28ffd9a2bd00794e1e365c5229a
+Description: An simple Tweak For Telegram iOS
+Name: TGExtra
+Author: choco
+
+Package: com.miss.Meizu3D
+Architecture: iphoneos-arm64
+Version: 1.6
+Section: Themes
+Maintainer: MissLove
+Filename: ./debs/com.miss.Meizu3D_1.6_iphoneos-arm64.deb
+Size: 61678892
+MD5sum: d4d0cea15b21a0aa863046f7725f5035
+SHA1: 6c9cd18f1bcf75c7e6532b7c0d1d961981fcb8b7
+SHA256: fcda8fc347de2cbeb8254f29683ae06a74220a0bd0d687910ea6909f443256ea
+SHA512: eb4b9c73498676332b0a9aa7bed6969ec1c2457c52dfc9847676cbc7eaed2a476f1c24df2443f4c61452d7614726c4eebd517176368e2176b51ff613552336ce
+Description: Chủ đề Meizu 3D
+Name: Meizu 3D Theme
+Author: Miss
+Depiction: http://misslove-theme.github.io/infodeb/Html/Meizu.html
+SileoDepiction: https://misslove-theme.github.io/sileodepictions/Meizu.json
+Icon: https://misslove-theme.github.io/icon/chude.png
+

@@ -1,9 +1,11 @@
-Origin: MissLove-Theme Repo
-Label: Chủ để Snowboard
+Origin: MissLive
+Label: Theme icon
 Suite: stable
 Version: 1.0
 Codename: ios
-Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
+Architecture: iphoneos-arm iphones-arm64
 Components: main
-Description: Mis mod theme
+Description: Apple-Support
 MD5Sum:
+ 7f87e4ea5bbdd829b20fcd6fc9aadce6 1871 Packages
+ fc0bf5546dd251c0a5844f52be7bfb7f 1036 Packages.bz2
