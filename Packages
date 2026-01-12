@@ -1,0 +1,17 @@
+Package: com.miss.Meizu3D  
+Architecture: iphoneos-arm64
+Version: 1.6
+Section: Themes
+Maintainer: Bvn Repo
+Filename: ./debs/com.miss.Meizu3D_1.6_iphoneos-arm64
+Size: 61678910
+MD5sum: d4d0cea15b21a0aa863046f7725f5035
+SHA1: 6c9cd18f1bcf75c7e6532b7c0d1d961981fcb8b7
+SHA256: fcda8fc347de2cbeb8254f29683ae06a74220a0bd0d687910ea6909f443256ea
+SHA512: eb4b9c73498676332b0a9aa7bed6969ec1c2457c52dfc9847676cbc7eaed2a476f1c24df2443f4c61452d7614726c4eebd517176368e2176b51ff613552336ce
+Description: Chủ đề Meizu 3D
+Name: Meizu 3D Theme
+Author: Miss
+Depiction: http://misslove-theme.github.io/infodeb/Html/Meizu.html
+SileoDepiction: https://bvmisslove-theme.github.io/sileodepictions/Meizu.json
+Icon: https://misslove-theme.github.io/icon/chude.png
