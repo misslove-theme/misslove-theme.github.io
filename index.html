@@ -295,7 +295,6 @@
       </div>
 
       <div class="pill">
-        <!-- ✅ chỉ ghi “Sáng / Tối” -->
         <button class="btn" id="themeBtn" title="Chuyển Sáng/Tối">
           <span class="spark" aria-hidden="true"></span>
           <span id="themeLabel">Sáng / Tối</span>
@@ -312,8 +311,8 @@
           </p>
 
           <div class="row">
-            <!-- ✅ đổi chữ -->
-            <a class="btn primary" id="addSileoBtn" href="#" rel="nofollow">
+            <!-- ✅ FIX ĐÚNG FORMAT SILEO: sileo://source/https://domain/ -->
+            <a class="btn primary" id="addSileoBtn" href="sileo://source/https://misslove-theme.github.io/" rel="nofollow">
               <svg class="i" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 2l3.2 6.5L22 9.3l-5 4.9 1.2 6.8L12 18.8 5.8 21l1.2-6.8-5-4.9 6.8-.8L12 2z" stroke="rgba(255,255,255,.95)" stroke-width="1.8" stroke-linejoin="round"/>
               </svg>
@@ -328,8 +327,6 @@
               Copy link
             </button>
           </div>
-
-          <!-- ✅ bỏ các mục: Tải icon / Theme Repo / GitHub Pages -->
         </div>
 
         <div class="card sourceBox">
@@ -414,14 +411,15 @@
   <script>
     (function(){
       const SOURCE = "https://misslove-theme.github.io/";
+      const SILEO  = "sileo://source/https://misslove-theme.github.io/"; // ✅ đúng format bro đưa
+
       const toast = document.getElementById("toast");
       document.getElementById("sourceUrl").textContent = SOURCE;
 
-      // Sileo deeplink
-      const sileoDeepLink = "sileo://source/" + encodeURIComponent(SOURCE);
-      document.getElementById("addSileoBtn").href = sileoDeepLink;
+      // ✅ giữ đúng link sileo://source/https://...
+      document.getElementById("addSileoBtn").href = SILEO;
 
-      // Theme toggle (label luôn là “Sáng / Tối”)
+      // Theme toggle
       const themeBtn = document.getElementById("themeBtn");
 
       function getPreferredTheme(){
@@ -449,7 +447,7 @@
         toastTimer = setTimeout(() => toast.style.display = "none", 1600);
       }
 
-      // Copy URL
+      // Copy URL (copy HTTPS để dán Sources)
       document.getElementById("copyBtn").addEventListener("click", async () => {
         try{
           await navigator.clipboard.writeText(SOURCE);
